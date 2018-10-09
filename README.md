@@ -1,5 +1,5 @@
 
-# Python - Class Variables and Methods
+# Class Variables and Instance Methods
 
 ## Introduction
 
@@ -7,12 +7,14 @@ In this lesson, we will introduce class variables and class methods. In Object O
 
 ## Objectives
 
-* Understanding class variables
-* Understanding class methods
-* Accessing class variables with class methods
-* Deciding When to Use a Class Variable and a Class Method
+You will be able to: 
 
-# Understanding Class Variables
+* Understand class variables
+* Understand class methods
+* Access class variables with class methods
+* Decide When to Use a Class Variable and a Class Method
+
+## Understanding Class Variables
 
 As with most new concepts in programming, it helps to start with some basic context. So, let's look at first what a class variable looks like.
 
@@ -70,7 +72,7 @@ print("2. ---", new_dog._species, "--- This is an instance object accessing its 
 
 > **Note:** Although the class and instance variables in the example above have the same name, they are completely independent from one another. Changing the class variable will not change the instance variable and vice versa.
 
-# Understanding Class Variables
+## Understanding Class Variables
 
 Now that we are total experts on class variables let's look at class methods!
 
@@ -155,11 +157,6 @@ print("1. ---", Dog._all, "--- Checking the Dog class's class variale _all")
 print("2. ---", Dog.add_dog(biscuit), "--- Using the add_dog class method to add a new dog instance to _all")
 print("3. ---", Dog._all, "--- Checking the Dog class's class variale _all")
 ```
-
-    1. --- [] --- Checking the Dog class's class variale _all
-    2. --- [<__main__.Dog object at 0x10b62d748>] --- Using the add_dog class method to add a new dog instance to _all
-    3. --- [<__main__.Dog object at 0x10b62d748>] --- Checking the Dog class's class variale _all
-
 
 Alright, let's break down what is going on here. We have our class variable `_all` which points to an empty list, we have our init method that creates intance variables for our instance methods, and finally we have our class method `add_dog` that uses the `cls` argument to access our class variables `_all` and then appends the given dog instance object to the list. Now, when we want to add a dog instance to our collection of dogs in order to keep track of them, we simply need to use the `add_dog` method and pass in the new dog instance.
 
